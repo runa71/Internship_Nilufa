@@ -4,7 +4,7 @@ from pages.log_in_page import LoginPage
 
 
 class Application:
-
+ #updated
     def __init__(self, driver):
         self.main_page = MainPage(driver)
         self.off_plan_page = OffPlan(driver)

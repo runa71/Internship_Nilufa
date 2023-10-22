@@ -9,4 +9,4 @@
     And Click on off plan at the left side menu
     And Verify the right page opens
     And Filter by sale status of Out of Stocks
-    Then Verify each product contains the Out of Stocks tag
+    Then Vergirify each product contains the Out of Stocks tag
