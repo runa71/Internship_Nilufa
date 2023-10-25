@@ -10,7 +10,7 @@ def open_main_reelly(context):
 def log_in_webpage(context):
     context.app.log_in_page.click_on_signin_link()
     sleep(2)
-    context.app.log_in_page.input_email("aminilufa7@gmail.com")
+    context.app.log_in_page.input_email("aminilufa71@gmail.com")
     sleep(2)
     context.app.log_in_page.input_password("Runa3271!")
     sleep(2)
