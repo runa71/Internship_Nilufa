@@ -15,39 +15,39 @@ class OffPlan(Page):
      Out_Of_Stock = (By.CSS_SELECTOR, 'div[wized="priorityStatusOutOfStock"].tag-properties.margin-bottom-8')
      Out_Of_Stock_Tag = (By.CSS_SELECTOR, 'div[wized="projectStatus"]')
 
-     # def off_plan_menu_web(self, *locator):
-     #    wait = WebDriverWait(self.driver, 10)
-     #    element = wait.until(EC.presence_of_element_located(self.Off_Plan))
-     #    element.click()
-
-     def off_plan_menu_mobile(self, *locator):
+     def off_plan_menu_web(self, *locator):
         wait = WebDriverWait(self.driver, 10)
-        element = wait.until(EC.presence_of_element_located(self.Off_Plan_Mobile))
+        element = wait.until(EC.presence_of_element_located(self.Off_Plan))
         element.click()
+
+     #def off_plan_menu_mobile(self, *locator):
+        #wait = WebDriverWait(self.driver, 10)
+        #element = wait.until(EC.presence_of_element_located(self.Off_Plan_Mobile))
+        #element.click()
 
      def right_page(self):
         return self.driver.current_url
 
      def click_filter(self, *locator):
-        # self.wait_for_element_clickable_click(*self.Filter_Btn_Web)
-        self.wait_for_element_clickable_click(*self.Filter_Btn_Mobile)
+        self.wait_for_element_clickable_click(*self.Filter_Btn_Web)
+        #self.wait_for_element_clickable_click(*self.Filter_Btn_Mobile)
 
      def filter_by_out_of_stock(self):
-        # self.click_filter()
-        # wait = WebDriverWait(self.driver, 10)
-        # element = wait.until(EC.element_to_be_clickable(self.Out_Of_Stock))
-        # element.click()
-        # self.wait_for_element_clickable_click(*self.Out_Of_Stock)
-
-        # Wait for the filter to load and scroll to the element if needed
         self.click_filter()
         wait = WebDriverWait(self.driver, 10)
-        element = wait.until(EC.presence_of_element_located(self.Out_Of_Stock))
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
+        element = wait.until(EC.element_to_be_clickable(self.Out_Of_Stock))
+        element.click()
+        self.wait_for_element_clickable_click(*self.Out_Of_Stock)
 
-        # Wait for the element to be clickable and click it
-        wait.until(EC.element_to_be_clickable(self.Out_Of_Stock)).click()
+        ## Wait for the filter to load and scroll to the element if needed
+        #self.click_filter()
+        #wait = WebDriverWait(self.driver, 10)
+        #element = wait.until(EC.presence_of_element_located(self.Out_Of_Stock))
+        #actions = ActionChains(self.driver)
+        #actions.move_to_element(element).perform()
+
+        ## Wait for the element to be clickable and click it
+        #wait.until(EC.element_to_be_clickable(self.Out_Of_Stock)).click()
 
 
      def verify_each_product_contains_sale_status_tag(self, expected_text, locator):
