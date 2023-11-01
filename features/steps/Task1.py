@@ -16,15 +16,15 @@ def log_in_webpage(context):
     sleep(2)
     context.app.log_in_page.click_continue()
 
-# @when('Click on off plan at the left side menu')
-# def off_plan(context):
-#     context.app.off_plan_page.off_plan_menu_web()
-#     sleep(3)
-
-@when('Click on off plan from bottom menu')
+@when('Click on off plan at the left side menu')
 def off_plan(context):
-    context.app.off_plan_page.off_plan_menu_mobile()
+    context.app.off_plan_page.off_plan_menu_web()
     sleep(3)
+
+#@when('Click on off plan from bottom menu')
+#def off_plan(context):
+    #context.app.off_plan_page.off_plan_menu_mobile()
+    #sleep(3)
 
 @when('Verify the right page opens')
 def right_page_opens(context):
