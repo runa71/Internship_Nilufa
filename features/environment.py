@@ -11,7 +11,7 @@ from app.application import Application
 from support.logger import logger
 
 
-# behave -f allure_behave.formatter:AllureFormatter -o test_results ./features/tests/Task_2.feature
+# behave -f allure_behave.formatter:AllureFormatter -o test_results ./features/tests/Task 1.feature
 # allure serve test_results/
 
 def browser_init(context):
